@@ -155,7 +155,7 @@ resource "aws_iam_instance_profile" "petclinic-master-server-profile-abdul" {
 resource "aws_instance" "kube-master" {
     ami = "ami-07d9b9ddc6cd8dd30"
     instance_type = "t3a.medium"
-    iam_instance_profile = aws_iam_instance_profile.petclinic-master-server-profile.name
+    iam_instance_profile = aws_iam_instance_profile.petclinic-master-server-profile-abdul.name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-master-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
     subnet_id = "subnet-08ef04bf4434c38e7"  # select own subnet_id of us-east-1a
